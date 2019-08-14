@@ -50,20 +50,8 @@ usart_reg_base
 @param[in] baud unsigned 32 bit. Baud rate specified in Hz.
 */
 
-void usart_set_baudrate(uint32_t usart, uint32_t baud)
+void usart_set_baudrate(uint32_t usart, uint32_t clock, uint32_t baud)
 {
-	uint32_t clock = rcc_apb1_frequency;
-
-#if defined USART1
-	if ((usart == USART1)
-#if defined USART6
-		|| (usart == USART6)
-#endif
-		) {
-		clock = rcc_apb2_frequency;
-	}
-#endif
-
 	/*
 	 * Yes it is as simple as that. The reference manual is
 	 * talking about fractional calculation but it seems to be only

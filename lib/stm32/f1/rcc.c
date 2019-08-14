@@ -53,11 +53,6 @@ LGPL License Terms @ref lgpl_license
 #include <libopencm3/stm32/rcc.h>
 #include <libopencm3/stm32/flash.h>
 
-/** Set the default clock frequencies */
-uint32_t rcc_apb1_frequency = 8000000;
-uint32_t rcc_apb2_frequency = 8000000;
-uint32_t rcc_ahb_frequency = 8000000;
-
 /*---------------------------------------------------------------------------*/
 /** @brief RCC Clear the Oscillator Ready Interrupt Flag
 
@@ -240,7 +235,9 @@ bool rcc_is_osc_ready(enum rcc_osc osc)
 
 void rcc_wait_for_osc_ready(enum rcc_osc osc)
 {
-	while (!rcc_is_osc_ready(osc));
+	while (!rcc_is_osc_ready(osc)) {
+		__asm__("nop");
+	}
 }
 
 /*---------------------------------------------------------------------------*/
