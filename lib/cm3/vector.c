@@ -78,6 +78,8 @@ void __attribute__ ((weak)) reset_handler(void)
 	/* Enabled by default on most Cortex-M parts, but not M3 r1 */
 	SCB_CCR |= SCB_CCR_STKALIGN;
 
+	SCB_VTOR = (uint32_t)&vector_table;
+
 	/* might be provided by platform specific vector.c */
 	pre_main();
 

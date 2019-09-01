@@ -656,11 +656,6 @@ void rcc_clock_setup_in_hsi_out_64mhz(void)
 
 	/* Select PLL as SYSCLK source. */
 	rcc_set_sysclk_source(RCC_CFGR_SW_SYSCLKSEL_PLLCLK);
-
-	/* Set the peripheral clock frequencies used */
-	rcc_ahb_frequency = 64000000;
-	rcc_apb1_frequency = 32000000;
-	rcc_apb2_frequency = 64000000;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -710,11 +705,6 @@ void rcc_clock_setup_in_hsi_out_48mhz(void)
 
 	/* Select PLL as SYSCLK source. */
 	rcc_set_sysclk_source(RCC_CFGR_SW_SYSCLKSEL_PLLCLK);
-
-	/* Set the peripheral clock frequencies used */
-	rcc_ahb_frequency = 48000000;
-	rcc_apb1_frequency = 24000000;
-	rcc_apb2_frequency = 48000000;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -763,11 +753,6 @@ void rcc_clock_setup_in_hsi_out_24mhz(void)
 
 	/* Select PLL as SYSCLK source. */
 	rcc_set_sysclk_source(RCC_CFGR_SW_SYSCLKSEL_PLLCLK);
-
-	/* Set the peripheral clock frequencies used */
-	rcc_ahb_frequency = 24000000;
-	rcc_apb1_frequency = 24000000;
-	rcc_apb2_frequency = 24000000;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -827,11 +812,6 @@ void rcc_clock_setup_in_hse_8mhz_out_24mhz(void)
 
 	/* Select PLL as SYSCLK source. */
 	rcc_set_sysclk_source(RCC_CFGR_SW_SYSCLKSEL_PLLCLK);
-
-	/* Set the peripheral clock frequencies used */
-	rcc_ahb_frequency = 24000000;
-	rcc_apb1_frequency = 24000000;
-	rcc_apb2_frequency = 24000000;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -891,11 +871,6 @@ void rcc_clock_setup_in_hse_8mhz_out_72mhz(void)
 
 	/* Select PLL as SYSCLK source. */
 	rcc_set_sysclk_source(RCC_CFGR_SW_SYSCLKSEL_PLLCLK);
-
-	/* Set the peripheral clock frequencies used */
-	rcc_ahb_frequency = 72000000;
-	rcc_apb1_frequency = 36000000;
-	rcc_apb2_frequency = 72000000;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -955,11 +930,6 @@ void rcc_clock_setup_in_hse_12mhz_out_72mhz(void)
 
 	/* Select PLL as SYSCLK source. */
 	rcc_set_sysclk_source(RCC_CFGR_SW_SYSCLKSEL_PLLCLK);
-
-	/* Set the peripheral clock frequencies used */
-	rcc_ahb_frequency = 72000000;
-	rcc_apb1_frequency = 36000000;
-	rcc_apb2_frequency = 72000000;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -1019,11 +989,6 @@ void rcc_clock_setup_in_hse_16mhz_out_72mhz(void)
 
 	/* Select PLL as SYSCLK source. */
 	rcc_set_sysclk_source(RCC_CFGR_SW_SYSCLKSEL_PLLCLK);
-
-	/* Set the peripheral clock frequencies used */
-	rcc_ahb_frequency = 72000000;
-	rcc_apb1_frequency = 36000000;
-	rcc_apb2_frequency = 72000000;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -1077,11 +1042,6 @@ void rcc_clock_setup_in_hse_25mhz_out_72mhz(void)
 
 	/* Select PLL as SYSCLK source. */
 	rcc_set_sysclk_source(RCC_CFGR_SW_SYSCLKSEL_PLLCLK);
-
-	/* Set the peripheral clock frequencies used */
-	rcc_ahb_frequency = 72000000;
-	rcc_apb1_frequency = 36000000;
-	rcc_apb2_frequency = 72000000;
 }
 
 /*---------------------------------------------------------------------------*/
